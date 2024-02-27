@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and Inputs</title>
+</head>
+
+<body>
+    <h1>Form</h1>
+    <form>
+        <div>
+            <!-- Username text input -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <!-- Email input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="30">
+        </div>
+        <div>
+            <label for="birthdate">Date of birth:</label>
+            <input type="date" id="birthdate" name="birthdate">
+        </div>
+        <div>
+            <label for="avatar">Profile Picture:</label>
+            <input type="file" name="avatar" id="avatar" accept="image/*">
+        </div>
+        <div>
+            <label for="term">Agree to Terms:</label>
+            <input type="checkbox" id="terms" name="terms" required>
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <div>
+            <label for="country">Country</label>
+            <select name="country" id="country">
+                <option value="USA">United States</option>
+                <option value="Macedonia" selected>Macedonia</option>
+                <option value="UK">United Kingdom</option>
+                <option value="Canada">Canada</option>
+                <option value="Germany">Germany</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="cars">Choose a favourite car:</label>
+            <input list="carList" id="cars" name="cars">
+            <datalist id="carList">
+                <option value="Toyota">
+                <option value="BMW">
+                <option value="FORD">
+                <option value="Volvo">
+                <option value="Velvooo">
+                <option value="Volvoooooo">
+            </datalist>
+        </div>
+        <div>
+            <label for="comments">Comments:</label>
+            <textarea name="comments" id="comments" cols="30" rows="5"></textarea>
+        </div>
+
+
+
+
+
+
+
+        <div>
+            <input type="reset" value="Reset">
+        </div>
+        <div>
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</body>
+
+</html>
