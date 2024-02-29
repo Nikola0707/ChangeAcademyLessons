@@ -1,0 +1,53 @@
+/* In CSS variable allow you to create resusable values that can be used throught a css documet. */
+
+:root {
+  --main-font: Arial, sans-serif;
+  --main-font-size: 16px;
+  --large-font-size: 26px;
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --third-color: #a84232;
+}
+
+/* These are invalid variable names */
+/* 
+ --123color: blue
+ --#color: red
+ --$width: 100px
+ --color: red
+ --width: 100px
+*/
+
+body {
+  font-family: var(--main-font);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+}
+
+.container {
+  font-size: var(--large-font-size);
+}
+.color-box {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  font-size: var(--main-font-size);
+  background-color: var(--secondary-color);
+}
+.tertiary {
+  background-color: var(--third-color);
+}
+
+.text {
+  font-size: var(--main-font-size);
+}

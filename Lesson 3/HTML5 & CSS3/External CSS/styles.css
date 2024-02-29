@@ -1,0 +1,44 @@
+/* External CSS */
+/* Three basic types of selectors in CSS */
+
+/* The element selectors select the HTML elements by name */
+
+/* Select all elements */
+
+/* * {
+  color: brown;
+} */
+
+body {
+  font-size: 22px;
+}
+
+h1 {
+  color: red;
+}
+
+h2,
+h3 {
+  color: blueviolet;
+}
+
+/* Class Selector */
+
+.drink {
+  font-size: 22px;
+  color: aqua;
+}
+
+/* ID Selector */
+
+/* We can use IDS in css But is better to avoid them */
+
+#coffee {
+  background-color: grey;
+}
+#tea {
+  background-color: black;
+}
+#juice {
+  background-color: burlywood;
+}

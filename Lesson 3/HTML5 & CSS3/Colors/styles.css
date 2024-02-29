@@ -1,0 +1,41 @@
+/* Color names => 140 colors names are predifined in the html an css color specification */
+
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
+}
+.green {
+  color: green;
+}
+
+/* Hexadecimal Notation */
+
+.hex-red {
+  color: #ff0000;
+}
+.hex-green {
+  color: #008000;
+}
+
+/* RGB Values */
+.rgb-red {
+  color: rgb(255, 0, 0);
+}
+.rgb-green {
+  color: rgb(0, 128, 0);
+}
+
+/* HSL Values */
+.hsl-blue {
+  color: hsl(240, 100%, 50%);
+}
+.hsl-green {
+  color: hsl(120, 100%, 25%);
+}
+
+/* Opacity Example */
+.opacity-example {
+  color: rgba(255, 0, 0, 0.5);
+}

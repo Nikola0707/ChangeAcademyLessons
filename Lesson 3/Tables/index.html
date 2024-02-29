@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Tables</title>
+</head>
+
+<!-- Simple table -->
+<h1>Employee Informations</h1>
+
+<table width="600" border="1">
+    <!-- caption ===> title or brief explanation -->
+    <caption>Change Academy</caption>
+    <!-- Adds a separate header to the table -->
+    <thead>
+        <!-- tr =>> Represents row -->
+        <tr>
+            <!-- Table headings -->
+            <th>ID</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <!-- Shows the main body of the table -->
+    <tbody>
+        <tr>
+            <!-- Data cells -->
+            <td>1</td>
+            <td>Nikola</td>
+            <td>Software Engineer</td>
+            <td>$95,000</td>
+        </tr>
+        <!-- Second row of data -->
+        <tr>
+            <td>2</td>
+            <td>Stefan</td>
+            <td>Front end developer</td>
+            <td>$100,000</td>
+        </tr>
+        <!-- Third row of data -->
+        <tr>
+            <td>3</td>
+            <td>Angela</td>
+            <td>Back end developer</td>
+            <td>$110,000</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Cell spanning in an HTML Table -->
+<h1>Product Information</h1>
+<table width="600" border="1">
+    <thead>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2">Laptop</td>
+            <td>$1000</td>
+        </tr>
+        <tr>
+            <td colspan="2">Smartphone</td>
+            <td>$600</td>
+        </tr>
+        <tr>
+            <td colspan="2">Monitor</td>
+            <td>$99</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Row Spanning in an HTML Table -->
+<h1>Class Schedule</h1>
+<table border="1" width="600">
+    <thead>
+        <tr>
+            <th>Time Slot</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>09:00 AM - 10:30 AM</td>
+            <td>Math</td>
+            <td rowspan="2">Science</td>
+            <td>English</td>
+            <td>Chemistry</td>
+            <td rowspan="3">Computer Science</td>
+        </tr>
+        <tr>
+            <td>10:45 AM - 12:15</td>
+            <td>History</td>
+            <td rowspan="2">Art</td>
+            <td rowspan="2">Biology</td>
+        </tr>
+        <tr>
+            <td>1:00 PM - 2:30 PM</td>
+            <td>Education</td>
+            <td>Geography</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Combination cell and row spanning -->
+<h1>Combined Rowspan and Colspan</h1>
+<table border="1" width="800">
+    <thead>
+        <tr>
+            <th rowspan="2">Month</th>
+            <th rowspan="2">Sales</th>
+            <th rowspan="2">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>January</td>
+            <td>$1000</td>
+            <td>$1000</td>
+
+        </tr>
+        <tr>
+            <td>February</td>
+            <td>$1100</td>
+            <td>$2000</td>
+        </tr>
+        <tr>
+            <td>June</td>
+            <td>$1200</td>
+            <td>$2300</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="3">This is the table Footer</th>
+        </tr>
+    </tfoot>
+</table>
+
+</html>
