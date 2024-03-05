@@ -1,0 +1,25 @@
+ul.list1 {
+  list-style-type: decimal;
+}
+ul.list2 {
+  list-style-type: disc;
+}
+
+.list3 {
+  list-style-type: circle;
+}
+
+.list4 {
+  list-style-type: square;
+}
+
+.list5 {
+  list-style-type: lower-roman;
+}
+
+.list6 {
+  list-style-type: upper-roman;
+}
+.list7 {
+  list-style-type: none;
+}

@@ -1,0 +1,23 @@
+html {
+  font-size: 10px;
+}
+
+h2 {
+  color: blue;
+}
+.em-size {
+  font-size: 16px;
+}
+
+.em-size span {
+  /* Em - relative to the parent element */
+  font-size: 4em; /* 4em *20px = 80px */
+}
+
+.rem-size {
+  font-size: 10px;
+}
+.rem-size span {
+  /* Relative to the root element (HTML tag) */
+  font-size: 5rem;
+}

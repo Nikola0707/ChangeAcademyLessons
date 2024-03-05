@@ -1,0 +1,78 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+}
+header,
+footer,
+section {
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+.box1 {
+  border-top-width: 4px;
+  border-right-width: 6px;
+  border-bottom-width: 8px;
+  border-left-width: 10px;
+  border-style: solid;
+  border-top-color: yellow;
+  border-right-color: red;
+  border-bottom-color: blue;
+  border-left-color: blueviolet;
+  box-shadow: 15px 20px 10px rgba(0, 0, 0, 0.423);
+}
+
+.box2 {
+  border: 2px solid #d72f2f;
+}
+
+.box3 {
+  border: 5px dotted #c3df27;
+  box-shadow: 15px 20px 10px rgba(0, 0, 0, 0.423);
+}
+
+.box4 {
+  border: 5px dashed #27df49;
+}
+
+.box5 {
+  border: 8px double #25889f;
+}
+
+.box6 {
+  border-bottom: 6px solid red;
+  border-left: 4px solid blue;
+}
+
+.box7 {
+  border-top: 6px solid red;
+  border-right: 4px solid blue;
+}
+
+/* circle */
+.box8 {
+  width: 100px;
+  height: 100px;
+  border: 2px solid green;
+  border-radius: 100%;
+}
+.box9 {
+  border: 2px solid green;
+  border-radius: 16px;
+}
+.box10 {
+  width: 150px;
+  height: 200px;
+  border: 2px solid green;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}

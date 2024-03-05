@@ -1,0 +1,67 @@
+/* Importing google fonts https://fonts.google.com/ */
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+/* .typography-example {
+  text-align: right;
+} */
+.first-paragraph {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.fontFamily {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fontSize {
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.fontWeight {
+  font-weight: 700;
+}
+.lineHeight {
+  line-height: 1.5;
+}
+.fontStyle {
+  font-style: italic;
+}
+.textDecoration {
+  text-decoration: underline;
+}
+.textAlign {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+.textLeft {
+  text-align: left;
+}
+.textTransformCapitalize {
+  text-transform: capitalize;
+}
+.textTransformUppercase {
+  text-transform: uppercase;
+}
+.textTransformLowercase {
+  text-transform: lowercase;
+}
+
+.wordSpacing {
+  word-spacing: 15px;
+}
+.letterSpacing {
+  letter-spacing: 12px;
+}
+
+.textShadow {
+  font-size: 3rem;
+  text-shadow: 2px 5px 15px rgba(240, 6, 6, 0.5);
+}
+.googleFont {
+  font-size: 3rem;
+  font-family: "VT323", monospace;
+  font-weight: 700;
+}
