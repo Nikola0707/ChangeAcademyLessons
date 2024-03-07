@@ -1,0 +1,50 @@
+.inline-container,
+.block-container {
+  border: 1px solid rgb(18, 107, 90);
+  margin: 10px;
+  padding: 10px 8px;
+  /* padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px; */
+  /* padding: 0 0 0 8px; */
+}
+
+.inline-element {
+  display: inline;
+  background-color: aqua;
+  padding: 10px 5px;
+  /* width: 200px;  won't have any effect */
+  /* height: 500px; won't have any effect */
+}
+
+.block-container {
+  border-color: brown;
+}
+.block-container span {
+  display: block;
+}
+.block-images img {
+  display: block;
+  margin-top: 10px;
+}
+
+.inline-block {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  margin: 10px;
+}
+.box1 {
+  background-color: coral;
+}
+.box2 {
+  background-color: blueviolet;
+}
+.box3 {
+  background-color: cornflowerblue;
+}
+.display-none {
+  display: none;
+}

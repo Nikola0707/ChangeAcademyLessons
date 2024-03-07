@@ -1,0 +1,86 @@
+/* External css */
+
+/* Colors  */
+:root {
+  --primary-color: #2a2828;
+  --secondary-color: #497426;
+  --text-color: #fff;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav {
+  background-color: var(--secondary-color);
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 10px;
+}
+main {
+  padding: 20px;
+}
+
+.book {
+  display: inline-block;
+  width: 30%;
+  padding: 20px;
+  background-color: var(--text-color);
+}
+.book p {
+  color: var(--primary-color);
+  font-size: 1.5em;
+  text-align: center;
+}
+.book img {
+  display: block;
+  height: 300px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.book h2 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 2rem;
+}
+
+footer {
+  width: 100%;
+  background-color: #4d4d4d;
+  color: var(--text-color);
+  /* height: 60px; */
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  font-size: 1.25rem;
+}

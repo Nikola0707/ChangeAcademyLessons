@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+
+/* The Flexbox is the best way to do layouts in CSS */
+
+h1 {
+  font-family: "Madimi One", sans-serif;
+  text-align: center;
+  border-bottom: 2px solid brown;
+  width: 300px;
+  margin: 0 auto 20px auto;
+}
+.container {
+  display: flex;
+  /* flex-direction: column; */
+  /* Allowing items to wrap onto multiple lines  */
+  flex-wrap: wrap;
+  /* gap: 10px; */
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  transition: all 2s;
+}
+
+.container img:hover {
+  transform: scale(1.1);
+  transform: rotate(90deg);
+  /* transform: rotate(18000deg); */
+}
+.wrapper {
+  border-top: 2px solid red;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}

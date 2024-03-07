@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Property</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Inline Elements: These elements do not start on a new line and only occupy the space bounded by the tags themselv.
+    Any height and widh properties will have no effect.
+    -->
+    <div class="inline-container">
+      <h2>Inline Elements</h2>
+      <p class="inline-element">The paragraph is a block element.</p>
+      <p class="inline-element">The paragraph is a block element.</p>
+      <h3>The headings are block elements.</h3>
+      <a href="#">This is an Inline element.</a>
+      <!-- <div> -->
+      <img
+        src="https://images.unsplash.com/photo-1707343844436-37580f155ed2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="this is inline element"
+        width="300"
+        height="200"
+      />
+      <!-- </div> -->
+    </div>
+
+    <!-- Block Elements: These elements take up the full width available and start on a new line. -->
+    <div class="block-container">
+      <h2>Block Element</h2>
+      <p>
+        The <span class="block">span element is an inline element</span>,
+        However, by using CSS, we can change its Display property to behave like
+        a block-level element.
+      </p>
+      <div class="block-images">
+        <img
+          src="https://images.unsplash.com/photo-1709770554994-f11ff89b0246?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="This is inline element"
+          width="400"
+          height="200"
+        />
+        <img
+          src="https://plus.unsplash.com/premium_photo-1671247953201-2fdc17af6692?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="This is inline element"
+          width="400"
+          height="200"
+        />
+      </div>
+    </div>
+    <!-- Inline block elements: These elements bahave similarly to inline elements but can have block level properties aplied to them like width and height. -->
+    <div>
+      <h2>Inline-Block Elements</h2>
+      <div class="inline-block box1">1</div>
+      <div class="inline-block box2">2</div>
+      <div class="inline-block box3">3</div>
+    </div>
+    <!-- Display None: These elements are not displayed on the web page. But they exist in the DOM -->
+    <div>
+      <h2>Display None</h2>
+      <p class="display-none">
+        This paragraph has display set to none and is not visible, but exist in
+        the DOM
+      </p>
+      <div class="display-none">
+        This div has display set to none and is not visible.
+      </div>
+    </div>
+  </body>
+</html>
