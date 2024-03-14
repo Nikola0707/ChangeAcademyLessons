@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Color Variables */
+:root {
+  --color-primary: #483285; /* Main color used in the design */
+  --color-secondary: #ffffff;
+  --color-quinary: #f7f7f7;
+  --color-accent: #3f8cff;
+  --color-quaternary: #dd946f; /* Another color */
+  --color-quinary: #f7f7f7; /* Yet another color */
+  --primary-blue-dark: #4361ee;
+  --text-white: #f7faff;
+  --text-gray: #b5b8bc;
+  --text-color: #303651;
+  --text-color-neutral: #697089;
+  --color-tertiary: #261e5a;
+}
+/* Styles applied to the entire webpage */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-secondary);
+}
+
+/* Navigation Styles */
+/* Styles applied to the navigation menu */
+nav {
+  display: flex; /* Use flexbox to arrange children */
+  justify-content: space-between; /* Distribute space evenly */
+  align-items: center; /* Center items vertically */
+  background-color: var(--color-primary); /* set background color */
+  color: var(--color-secondary); /* Set text color */
+  padding: 20px; /* Add padding to all sides */
+}
+
+/* Styles for the logo within the navigation */
+
+nav .logo a {
+  text-decoration: none; /* Remove underline */
+  color: var(--color-secondary); /* set text color */
+  font-weight: 900; /* set font weight */
+  font-size: 2rem; /* set font size 2rem === 32px */
+  border: 1px solid var(--color-quinary);
+  border-radius: 100%; /* make the border circle */
+  width: 50px; /* set the element width */
+  height: 50px; /* set the element height */
+  display: flex; /* Use flexbox to arrange children */
+  justify-content: center; /* horizontal aligment */
+  align-items: center; /* Center items vertically */
+  padding: 5px; /* Add padding to all sides */
+}
+
+/* Styles for navigation list */
+nav ul {
+  display: flex; /* Use flexbox for list items */
+  list-style-type: none; /* Remove default list style */
+}
+/* Styles for navigation list items */
+nav ul li {
+  margin-right: 20px; /* Add space between list items */
+}
+
+/* Styles for the navigation links */
+nav ul li a {
+  color: var(--color-secondary); /* set text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2rem; /* set font size 1.2rem === 19.2px */
+  padding: 10px 15px; /* add padding top and buttom 10px, left and right 15px */
+  display: flex;
+  align-items: center;
+}
+/* Style the navigation links on hover */
+nav ul a:hover {
+  background-color: var(--color-accent); /* set background color */
+  color: var(--color-secondary); /* set text color */
+  border-radius: 4px; /* Round corners */
+  transition: background-color 0.5s ease; /* smooth transition effect*/
+}
+
+/* Main content styles */
+main {
+  margin: 50px; /* Add maring */
+}
+/* Styles for what we do section */
+.what-we-do {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap;
+}
+
+.what-we-do > div {
+  flex: 1; /* Allow children to grow and fill space */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.what-we-do p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.what-we-do img {
+  max-width: 90%; /* Ensure image doesn't exceed container width */
+  height: auto; /* set element height  */
+  border-radius: 8px; /* set element border radius  */
+  margin-left: 20px; /* set element margin left */
+}
+
+/* Projects styles */
+/* Styles for project section */
+.projects {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  padding: 0; /* add padding to all sides */
+}
+
+.articles {
+  display: flex; /*  Use flexbox*/
+  flex-wrap: wrap; /* allow items to wrap */
+  margin: 0 auto; /* center items horizontally */
+  justify-content: flex-start; /* align items flexbox start */
+  gap: 2rem; /* add space between items */
+}
+
+.articles article {
+  max-width: 320px; /* Limit maximum width of articles */
+  display: flex; /* use flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* center items horizontaly */
+}
+
+.articles article figure {
+  margin-bottom: 0; /* remove bottom margin */
+}
+
+.articles article h2 {
+  margin: 0 0 1rem 0; /* set margin */
+  font-size: 1.6rem; /* set font size */
+  color: var(--color-primary); /* set text color */
+}
+
+.articles article a {
+  text-decoration: none; /* remove underline */
+  color: var(--color-quaternary); /* set text color */
+}
+
+.articles article img {
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  transition: transform 0.4s ease-in-out; /* Smooth transition */
+}
+
+.article-preview {
+  padding: 1.5rem; /* set padding  */
+  background-color: var(--color-quinary); /* set background color */
+}
+
+.articles figure {
+  width: 100%; /* set width */
+  height: 13rem; /* set height */
+  overflow: hidden; /* hide long content */
+}
+
+.articles figure img {
+  height: 100%; /* Set height to 100% */
+  object-fit: cover; /* cover container */
+  aspect-ratio: 16 / 9; /* set aspect ratio */
+}
+
+.articles article:hover img {
+  transform: scale(1.5);
+}
+
+/* Our Team */
+.profle-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-around;
+  height: 28rem;
+  position: relative;
+  padding-bottom: 20px;
+}
+.profile {
+  width: 22rem;
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.profile .profile-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background-color: var(--color-tertiary);
+  top: 0;
+  left: 0;
+}
+
+.profile:hover img {
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+}
