@@ -84,7 +84,7 @@ main {
 .what-we-do {
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center items vertically */
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* allow items to wrap */
 }
 
 .what-we-do > div {
@@ -169,49 +169,170 @@ h1 {
 }
 
 .articles article:hover img {
-  transform: scale(1.5);
+  transform: scale(1.5); /* scale image onhover */
 }
-
 /* Our Team */
-.profle-wrapper {
+/* Wrapper for each profile */
+.profile-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   justify-content: space-around;
-  height: 28rem;
-  position: relative;
+  position: relative; /* Positioning context for absolute positioned elements */
   padding-bottom: 20px;
 }
+
+/* Profile card */
 .profile {
-  width: 22rem;
-  height: 28rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  transition: 0.5s;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack child elements vertically */
+  align-items: center; /* Center children horizontally */
+  position: relative; /* Establishes positioning context for absolutely positioned elements */
+  overflow: hidden; /* Hide overflowing content */
+  width: 22rem; /* Set width */
+  height: 28rem; /* Set height */
+  border-radius: 1rem; /* Rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6); /* Add shadow */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: 0.5s; /* Smooth transition for changes */
 }
 
+/* Profile image */
 .profile .profile-image {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 2;
-  background-color: var(--color-tertiary);
-  top: 0;
-  left: 0;
+  position: absolute; /* Position absolutely within its container */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Take full width of container */
+  height: 100%; /* Take full height of container */
+  z-index: 2; /* Place above other content */
+  background-color: var(--color-tertiary); /* Set background color */
+  transition: 0.5s; /* Smooth transition for changes */
 }
 
-.profile:hover img {
-  opacity: 0.4;
-  transition: 0.5s;
-}
-
+/* Styling for profile images inside profile */
 .profile-image img {
-  width: 100%;
-  height: 100%;
+  height: 100%; /* Take full height of container */
+  width: 100%; /* Take full width of container */
+  object-fit: cover; /* Maintain aspect ratio and cover entire container */
+}
+
+/* Styling for profile image on hover */
+.profile:hover img {
+  opacity: 0.4; /* Reduce opacity */
+  transition: 0.5s; /* Smooth transition for changes */
+}
+
+/* Styling for profile image on hover */
+.profile:hover .profile-image {
+  transform: translateY(-104px); /* Move image upwards */
+  transition: all 0.9s; /* Smooth transition for changes */
+}
+
+/* Social icons container */
+.social-icons {
+  position: absolute; /* Position absolutely within its container */
+  display: flex; /* Use flexbox for layout */
+  gap: 0.75rem; /* Add gap between children */
+  z-index: 3; /* Place above other content */
+  bottom: 10.125rem; /* Align to bottom */
+}
+
+/* Styling for list items in social icons */
+.social-icons li {
+  list-style: none; /* Remove bullet points */
+}
+
+/* Styling for social icon links */
+.social-icons li a {
+  display: block; /* Display as block element */
+  display: flex; /* Use grid for layout */
+  justify-content: center;
+  align-items: center;
+  background: #fff; /* Set background color */
+  font-size: 23px; /* Set font size */
+  font-weight: bold; /* Set font weight */
+  width: 2.5rem; /* Set width */
+  height: 2.5rem; /* Set height */
+  border: 1px solid #cdcdcd; /* Add border */
+  border-radius: 0.5rem; /* Add border radius */
+  transition: 0.2s; /* Smooth transition for changes */
+  opacity: 0; /* Initially invisible */
+}
+
+/* Styling for social icon links on hover */
+.social-icons li a:hover {
+  background: var(--color-accent); /* Change background color */
+  transition: 0.2s; /* Smooth transition for changes */
+}
+
+/* Styling for social icon SVG */
+.social-icons li a svg {
+  color: var(--background); /* Set color */
+  transition: 0.2s; /* Smooth transition for changes */
+}
+
+/* Styling for social icon SVG on hover */
+.social-icons li a:hover svg {
+  color: white; /* Change color */
+  transition: 0.8s; /* Smooth transition for changes */
+  transform: rotateY(360deg); /* Rotate */
+}
+
+/* Show social icons on profile hover */
+.profile:hover .social-icons li a {
+  opacity: 1; /* Make visible */
+}
+
+/* Delay transitions for social icons */
+.profile:hover li:nth-child(1) a {
+  transition-delay: 0.1s; /* Delay transition */
+}
+
+.profile:hover li:nth-child(2) a {
+  transition-delay: 0.2s; /* Delay transition */
+}
+
+.profile:hover li:nth-child(3) a {
+  transition-delay: 0.3s; /* Delay transition */
+}
+
+.profile:hover li:nth-child(4) a {
+  transition-delay: 0.4s; /* Delay transition */
+}
+
+/* Styling for profile name */
+.profile-name {
+  position: absolute; /* Position absolutely within its container */
+  bottom: -10px; /* Align to bottom */
+  left: 0; /* Align to left */
+  z-index: 4; /* Place above other content */
+  width: 100%; /* Take full width of container */
+  height: 7rem; /* Set height */
+  padding: 0.75rem 0.875rem; /* Add padding */
+  z-index: 1; /* Place above other content */
+  color: #333; /* Set text color */
+  background-color: #fff; /* Set background color */
+  text-align: left; /* Align text to left */
+}
+.profile-bio {
+  width: 90%;
+}
+/* Styling for profile name on hover */
+.profile:hover .profile-name {
+  background-color: #fff; /* Change background color */
+}
+
+/* Styling for h2 within profile name */
+.profile-name h2 {
+  margin-bottom: 0.5rem; /* Add bottom margin */
+}
+
+/* Subscription */
+.subscription-container {
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center children horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 4rem 2rem; /* Set the gap between items */
 }
