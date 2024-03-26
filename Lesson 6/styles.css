@@ -525,3 +525,50 @@ footer {
   color: var(--text-gray);
   margin: 0.25rem 0 1.25rem 0;
 }
+
+nav .toggle-checkbox,
+.toggle-label {
+  display: none;
+}
+
+/* This line starts a media query block, which applies
+ styles only when the screen widht is 768 pixels or less */
+
+@media (max-width: 768px) {
+  nav .toggle-checkbox:not(:checked) ~ ul {
+    display: none;
+  }
+  nav .toggle-checkbox:checked ~ .logo {
+    display: none;
+  }
+  nav .toggle-checkbox:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+  }
+  .toggle-label {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  .what-we-do {
+    flex-direction: column;
+  }
+  .footer-top {
+    flex-direction: column;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
