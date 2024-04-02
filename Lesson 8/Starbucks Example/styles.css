@@ -96,7 +96,7 @@ section img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #dbe6f2;
+  background-color: #d5d0ea;
 }
 
 .container-right h1 {
@@ -109,8 +109,143 @@ section img {
 
 .container-right p {
   width: 525px;
-  font-size: 25px;
+  font-size: 24px;
   text-align: center;
   color: #1e3932;
   margin-top: 0;
+}
+
+.container-right a {
+  border: 1px;
+  border-style: solid;
+  color: #1e3932;
+  padding: 7px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.container-right a:hover {
+  background-color: hsl(164deg 31% 17% / 10%);
+}
+
+/* Section 2 */
+.section-two img {
+  order: 1;
+}
+.section-two .container-right {
+  background-color: #fdd8f7;
+}
+.section-two h1,
+.section-two p {
+  color: #0f462f;
+}
+
+/* Section 4 */
+.section-four img {
+  order: 2;
+}
+.section-four .container-right {
+  background-color: #dbe6f2;
+}
+
+/* SECTION 5 */
+.section-five .container-right {
+  background-color: #d8da6d;
+}
+.section-five h1 {
+  font-size: 24px;
+}
+
+.section-five p {
+  font-size: 19px;
+}
+
+/* SECTION 6 */
+/* NESTED CSS EXAMPLE */
+.section-six div {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  p {
+    font-size: 14px;
+    width: 551px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8;
+    font-weight: 600;
+    color: #000000;
+  }
+  a {
+    color: #000000;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #c0c0c0;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 -2px 2px rgba(0, 0, 0, 0.06),
+    0 0 2px rgba(0, 0, 0, 0.07);
+  padding: 24px 0;
+}
+footer nav {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+footer h2 {
+  font-size: 19px;
+  margin-bottom: 24px;
+}
+footer a {
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: normal;
+  color: #6e6e6e;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer li {
+  padding: 8px 0;
+}
+
+footer li a:hover {
+  color: #000000;
+}
+.order-and-pick-up {
+  grid-column: 5/8;
+}
+footer nav {
+  border-bottom: 2px solid #c0c0c0;
+}
+
+footer .social-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+footer .social-wrapper .social-icons {
+  width: 20%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+footer .social-icons svg,
+footer .privacy li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+footer .privacy li a:hover {
+  text-decoration: underline;
+}
+
+.licence {
+  color: #6e6e6e;
+  font-size: 14px;
 }
