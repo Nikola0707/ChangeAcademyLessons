@@ -55,7 +55,7 @@ console.log("fullName", fullName);
 let greeting = "Hello, " + fullName + "!"; // GOOD: meaningful concatonation
 console.log("greeting:", greeting);
 
-// Template Literals
+// Template Literals === ES6
 /*
 - Templete literals are an alternative way to concatenate string in JavaScript.
 - They allow you to embed expressions inside a string using ${}
