@@ -82,3 +82,11 @@ h3 {
   position: relative;
   top: 3px;
 }
+.progress-container {
+  height: 4px;
+  width: 90%;
+  margin: 40px 20px;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
