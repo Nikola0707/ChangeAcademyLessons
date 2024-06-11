@@ -66,6 +66,25 @@ function displayWeather(data) {
     `The weather in ${data.location} is ${data.condition} with a temperature of ${data.temperature}C`
   );
 }
-fetchWeather("Struga", displayWeather);
+fetchWeather("Skopje", displayWeather);
 
 // Issues with Callbacks - Callback hell
+
+// Example:
+function startDay(name) {
+  greet(name, () => {
+    greet("John", () => {
+      greet("Doe", () => {
+        sayGoodbye();
+        greet("Alice", () => {
+          sayGoodbye();
+          greet("Ana", () => {
+            sayGoodbye();
+            console.log("All greetings done!");
+          });
+        });
+      });
+    });
+  });
+}
+startDay("Nikola");
