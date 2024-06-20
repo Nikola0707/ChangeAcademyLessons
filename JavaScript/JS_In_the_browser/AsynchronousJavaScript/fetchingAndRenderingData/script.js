@@ -6,6 +6,7 @@ async function getPosts() {
   return posts;
 }
 function renderPost(post) {
+  // const { body, title, userId } = post;
   const section = document.querySelector(".posts");
   const postDiv = document.createElement("div");
 
