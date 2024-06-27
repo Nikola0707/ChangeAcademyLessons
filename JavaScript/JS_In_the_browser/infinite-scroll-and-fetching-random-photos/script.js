@@ -90,14 +90,15 @@ function displayPhotos() {
     // Add an event listener to the <img> element to check when each image has finished loading
     imageElement.addEventListener("load", imageLoaded);
 
+    // Append the <a> element to the imageContainer
+    imageContainer.appendChild(imageLinkElement);
+
     // Append the <h1> element to the imageContainer
     imageContainer.appendChild(headingElement);
     // Append the <p> element to the imageContainer
     imageContainer.appendChild(paragraphElement);
     // Append the <img> element to the <a> element
     imageLinkElement.appendChild(imageElement);
-    // Append the <a> element to the imageContainer
-    imageContainer.appendChild(imageLinkElement);
   });
 }
 
