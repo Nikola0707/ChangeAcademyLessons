@@ -1,0 +1,64 @@
+/* Global Styles */
+
+/* Reset marign, padding, and box-sizing for all elements and pseudo-elements */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+  background-color: #61134d;
+  color: #0a1e31;
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+.container {
+  width: 90vw;
+  background-color: #fff;
+  margin: 5rem auto;
+  border-radius: 0.3rem;
+  padding: 2.5rem 2rem;
+  max-width: 920px;
+}
+
+.question {
+  padding: 1rem 1.5rem;
+  border: 2px solid #eae6eb;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question h4 {
+  text-transform: none;
+  line-height: 1.5;
+}
+.question p {
+  color: #324d67;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+.question button {
+  background: transparent;
+  border-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  background-color: #eae6eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #b4345c;
+  cursor: pointer;
+}
