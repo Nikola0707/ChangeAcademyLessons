@@ -1,0 +1,31 @@
+.countriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.countryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.countryCard:hover {
+  transform: translateY(-5px);
+}
+.flag {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.countryCard h2 {
+  font-size: 1.5rem;
+}
