@@ -29,3 +29,7 @@
 .countryCard h2 {
   font-size: 1.5rem;
 }
+.countryCard p {
+  font-size: 1rem;
+  color: #666;
+}

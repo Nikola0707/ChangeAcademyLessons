@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./CountryList.module.css";
+import { getDisplayName } from "../../helpers/getDisplayName";
+import { filterCountries } from "../../helpers/filterCountries";
 
 const CountryList = () => {
   const [countries, setCountries] = useState([]);
@@ -10,13 +12,10 @@ const CountryList = () => {
 
   const handleSearchChange = (event) => setSearchTerm(event.target.value);
 
-  const getDisplayName = (name) => {
-    return name === "North Macedonia" ? "Macedonia" : name;
-  };
-
-  const filteredCountries = countries.filter((country) =>
-    country.name.common.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // const filteredCountries = countries.filter((country) =>
+  //   country.name.common.toLowerCase().includes(searchTerm.toLowerCase())
+  // );
+  const filteredCountries = filterCountries(countries, searchTerm);
 
   useEffect(() => {
     const fetchCountries = async () => {

@@ -1,0 +1,33 @@
+.countryDetails {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.countryDetails h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.countryDetails img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.countryDetails p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+.countryDetails p span {
+  font-weight: bold;
+  color: #333;
+}
