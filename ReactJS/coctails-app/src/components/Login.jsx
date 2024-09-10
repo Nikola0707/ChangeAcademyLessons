@@ -1,11 +1,37 @@
 import { useState } from "react";
+import { login } from "../helpers/auth";
+import { useNavigate } from "react-router-dom";
+import useUserStore from "../store/useUserStore";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const setUser = useUserStore((state) => state.setUser);
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    setErrorMessage("");
+    try {
+      const { token, user } = await login(email, password);
+      setUser(user);
+      localStorage.setItem("token", token);
+      navigate("/home");
+    } catch (error) {
+      console.error(error);
+      setErrorMessage("Login failed. Please check your credentionals!");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <form className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4">
       <input
         type="email"
         placeholder="Email"
@@ -24,9 +50,11 @@ const Login = () => {
       />
       <button
         type="submit"
-        className="w-full p-2 bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600"
+        className={`w-full py-2 rounded-md ${
+          loading ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600 text-white"
+        }`}
       >
-        Login
+        {loading ? "Logging in..." : "Login"}
       </button>
     </form>
   );
