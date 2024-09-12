@@ -6,6 +6,7 @@ import App from "./App.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import Home from "./components/Home.jsx";
+import CocktailDetail from "./components/CocktailDetail.jsx";
 
 const router = createBrowserRouter([
   // Route confg for root path ("/")
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/cocktail/:id",
+    element: <CocktailDetail />,
   },
 ]);
 

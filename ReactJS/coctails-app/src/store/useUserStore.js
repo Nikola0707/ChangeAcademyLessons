@@ -11,7 +11,7 @@
 
 // Update Zustand Store to use persistence (do not lose the state after refresh)
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { createJSONStorage, persist } from "zustand/middleware";
 
 // define the zustand store with persistence
 
@@ -24,7 +24,7 @@ const useUserStore = create(
     }),
     {
       name: "user-storage", // Name of the key in localStorage
-      getStorage: () => localStorage, // Use localStorage to store the data
+      storage: createJSONStorage(() => localStorage),
     }
   )
 );
