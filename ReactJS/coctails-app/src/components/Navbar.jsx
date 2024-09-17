@@ -7,6 +7,7 @@ import { signOut } from "../helpers/auth";
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const user = useUserStore((state) => state.user);
+  const clearUser = useUserStore((state) => state.clearUser);
 
   const toggleDropdown = () => setIsDropdownOpen((prev) => !prev);
   return (
@@ -73,7 +74,10 @@ const Navbar = () => {
 
               <div className="border-t border-gray-200">
                 <button
-                  onClick={signOut}
+                  onClick={() => {
+                    clearUser();
+                    signOut();
+                  }}
                   className="w-full py-2 px-5 text-red-600 hover:bg-red-100 transition-colors duration-200"
                 >
                   Sign Out

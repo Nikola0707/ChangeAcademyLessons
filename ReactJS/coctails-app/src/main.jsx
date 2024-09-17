@@ -1,26 +1,37 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Auth from "./components/Auth.jsx";
-import App from "./App.jsx";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import Home from "./components/Home.jsx";
 import CocktailDetail from "./components/CocktailDetail.jsx";
+import Favorites from "./components/pages/Favorites.jsx";
+import PublicRoute from "./components/PublicRoute.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 const router = createBrowserRouter([
   // Route confg for root path ("/")
   {
     path: "/",
-    element: <Auth />,
+    element: <PublicRoute element={<Auth />} />,
   },
   {
     path: "/home",
-    element: <Home />,
+    element: <ProtectedRoute element={<Home />} />,
   },
   {
     path: "/cocktail/:id",
-    element: <CocktailDetail />,
+    element: <ProtectedRoute element={<CocktailDetail />} />,
+  },
+  {
+    path: "/favorites",
+    element: <ProtectedRoute element={<Favorites />} />,
+  },
+  {
+    path: "*",
+    element: <ProtectedRoute element={<NotFound />} />,
   },
 ]);
 
