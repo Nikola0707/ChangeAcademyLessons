@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { Priority } from "../Types";
 import { useTodoStore } from "../store/useTodoStore";
 
@@ -7,14 +7,17 @@ const AddTodo = () => {
   const [priority, setPriority] = useState<Priority>("medium");
 
   const addTodo = useTodoStore((state) => state.addTodo);
-  const handleAddClick = () => {
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
     if (todoText.trim()) {
       addTodo(todoText, priority);
       setTodoText("");
     }
   };
+
   return (
-    <div>
+    <form onSubmit={handleSubmit} className="my-6">
       <input
         type="text"
         value={todoText}
@@ -31,13 +34,10 @@ const AddTodo = () => {
         <option value="medium">Medium</option>
         <option value="high">High</option>
       </select>
-      <button
-        onClick={handleAddClick}
-        className="ml-2 bg-blue-500 text-white p-2 rounded-lg"
-      >
+      <button className="ml-2 bg-blue-500 text-white p-2 rounded-lg">
         Add Todo
       </button>
-    </div>
+    </form>
   );
 };
 
