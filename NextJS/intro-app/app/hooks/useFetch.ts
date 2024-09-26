@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { Product } from "../types/types";
 
-const useFetch = <T>(url: string, page: number, limit: number) => {
-  const [data, setData] = useState<T | null>(null);
+const useFetch = (url: string) => {
+  const [data, setData] = useState<Product[] | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -9,7 +10,7 @@ const useFetch = <T>(url: string, page: number, limit: number) => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`${url}?limit=${limit}&page=${page}`);
+        const response = await fetch(`${url}`);
         if (!response.ok) {
           throw new Error("Failed to fetch");
         }
@@ -23,7 +24,7 @@ const useFetch = <T>(url: string, page: number, limit: number) => {
     };
 
     fetchData();
-  }, [url, page, limit]);
+  }, [url]);
 
   return { data, loading, error };
 };
