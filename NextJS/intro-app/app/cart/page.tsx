@@ -1,9 +1,6 @@
-"use client";
-import { useCartStore } from "../store/useStore";
+import Cart from "../components/Cart";
 
 const CartPage = () => {
-  const items = useCartStore((state) => state.items);
-  console.log("items", items);
-  return <h1>Cart Page items: {items.length}</h1>;
+  return <Cart />;
 };
 export default CartPage;

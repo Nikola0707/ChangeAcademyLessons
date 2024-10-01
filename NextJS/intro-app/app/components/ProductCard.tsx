@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { Product } from "../types/types";
 import StarRatings from "react-star-ratings";

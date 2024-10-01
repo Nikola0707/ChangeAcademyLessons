@@ -25,12 +25,19 @@ const ProductDetailContent = ({ data }: ProductDetailContentProps) => {
   const handleAddToCart = () => {
     if (selectedSize) {
       addItem(data, quantity, selectedSize);
-      //   setToasMessage
+      setToastMessage(`
+        ${quantity} ${data.title}${
+        quantity > 1 ? "(s)" : ""
+      } added to cart with size ${selectedSize}
+        `);
+      setToastVisible(true);
     } else {
       setToastMessage("Please select a size.");
       setToastVisible(true);
     }
   };
+
+  const handleCloseToast = () => setToastVisible(false);
 
   return (
     <div className="container mx-auto p-6 bg-white shadow-md rounded-lg border border-gray-200 flex items-center justify-center min-h-screen">
@@ -87,7 +94,11 @@ const ProductDetailContent = ({ data }: ProductDetailContentProps) => {
           </button>
         </div>
       </div>
-      <Toast />
+      <Toast
+        message={toastMessage}
+        visible={toastVisible}
+        onClose={handleCloseToast}
+      />
     </div>
   );
 };
